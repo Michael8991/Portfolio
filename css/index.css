@@ -1,0 +1,50 @@
+body {
+  font-family: "Source Sans 3", sans-serif;
+  background: #093028;
+  background: linear-gradient(
+    40deg,
+    rgba(9, 48, 40, 1) 0%,
+    rgba(35, 122, 87, 1) 100%
+  );
+  background-repeat: no-repeat; /* evita repetición */
+  background-size: cover; /* cubre toda la pantalla */
+  background-position: center; /* centrado */
+  margin: 0; /* evita márgenes que generen espacios blancos */
+  min-height: 100vh; /* asegura que ocupe toda la altura */
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-title-font {
+  font-family: "DM Serif Text", serif;
+}
+.header-title-font a {
+  color: white;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link {
+  position: relative; /* Necesario para que el ::after se posicione bien */
+  color: white !important;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* distancia del borde inferior */
+  width: 0%;
+  height: 2px; /* grosor del "borde" */
+  background-color: white; /* color de la línea */
+  transition: width 0.3s ease; /* animación */
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
